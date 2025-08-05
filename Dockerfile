@@ -9,6 +9,9 @@ RUN mkdir dist && \
     cp -r css fonts img js scss dist/ 2>/dev/null || true
 # ---------- Stage 2: Serve with Nginx ----------
 FROM nginx:alpine
-COPY --from=builder /app/dist /usr/share/nginx/html
+#COPY --from=builder /app/dist /usr/share/nginx/html
+
+COPY . /usr/share/nginx/html
+
 EXPOSE 80
 
