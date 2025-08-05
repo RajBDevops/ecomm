@@ -13,7 +13,7 @@ jobs:
       - uses: RajBDevops/docker-image-reusable/.github/actions/docker-build-push@main
 
         with:
-          image_name: rajbdocker/demo-ecom
+          image_name: rajbdocker/demo-ecom1
           tag: latest
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
