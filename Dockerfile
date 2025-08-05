@@ -7,6 +7,9 @@ RUN mkdir dist && \
     --collapse-whitespace --remove-comments --minify-css true --minify-js true
 
 # ---------- Stage 2: Serve with Nginx ----------
+#FROM nginx:alpine
+#COPY --from=builder /app/dist /usr/share/nginx/html
+#EXPOSE 80
 FROM nginx:alpine
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY src/ /usr/share/nginx/html
 EXPOSE 80
