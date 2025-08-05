@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: ./.github/actions/docker-build-push/action.yml
+      - uses: RajBDevops/docker-image-reusable/.github/actions/docker-build-push@main
 
         with:
           image_name: rajbdocker/demo-ecom
