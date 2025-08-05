@@ -1,4 +1,4 @@
-FROM: node:18-alpine AS builder
+FROM node:18-alpine AS builder
 WORKDIR /app
 COPY src/ ./src/
 RUN npm install -g html-minifier-terser
